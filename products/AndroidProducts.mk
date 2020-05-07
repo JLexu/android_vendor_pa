@@ -35,6 +35,7 @@ PRODUCT_MAKEFILES += \
     $(LOCAL_DIR)/sagit/pa_sagit.mk \
     $(LOCAL_DIR)/X00TD/pa_X00TD.mk \
     $(LOCAL_DIR)/X01BD/pa_X01BD.mk
+    device/xiaomi/grus/pa_grus.mk
 
 # SONY OpenDevices
 # Loire 8956
@@ -73,4 +74,5 @@ COMMON_LUNCH_CHOICES += \
     pa_sagit-userdebug \
     pa_suzu-userdebug \
     pa_X00TD-userdebug \
-    pa_X01BD-userdebug
+    pa_X01BD-userdebug \
+    pa_grus-userdebug
