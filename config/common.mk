@@ -78,7 +78,6 @@ PRODUCT_COPY_FILES += \
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/handheld_core_hardware.xml \
-    vendor/pa/config/permissions/pa-default-permissions.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/default-permissions/pa-default-permissions.xml \
     vendor/pa/config/permissions/privapp-permissions-pa-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-pa.xml \
     vendor/pa/config/permissions/privapp-permissions-pa-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-pa.xml
 
@@ -159,6 +158,16 @@ SKIP_BOOT_JARS_CHECK := true
 PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := false
+ifneq ($(TARGET_DISABLE_ALTERNATIVE_FACE_UNLOCK), true)
+PRODUCT_PACKAGES += \
+    FaceUnlockService
+TARGET_FACE_UNLOCK_SUPPORTED := true
+endif
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.moto_unlock_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
 
 # HIDL
 PRODUCT_PACKAGES += \
