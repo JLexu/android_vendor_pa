@@ -156,8 +156,12 @@ SKIP_BOOT_JARS_CHECK := true
 
 # Charger mode images
 PRODUCT_PACKAGES += \
-    charger_res_images \
+    charger_res_images
+
+ifneq ($(TARGET_USES_AOSP_CHARGER),true)
+PRODUCT_PACKAGES += \
     product_charger_res_images
+endif
 
 # Face Unlock
 TARGET_FACE_UNLOCK_SUPPORTED := false

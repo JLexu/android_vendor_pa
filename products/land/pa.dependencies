@@ -1,22 +1,21 @@
 [
     {
-        "remote":       "aospa",
-        "repository":   "AOSPA/android_device_xiaomi_rosy",
-        "target_path":  "device/xiaomi/rosy",
-        "revision":     "quartz"
+        "remote": "aospa",
+        "repository": "AOSPA/android_device_xiaomi_land",
+        "target_path": "device/xiaomi/land",
+        "revision": "quartz"
     },
     {
-        "remote":       "blobs",
-        "repository":   "proprietary_vendor_xiaomi",
-        "target_path":  "vendor/xiaomi",
-        "revision":     "quartz"
+        "remote": "blobs",
+        "repository": "proprietary_vendor_xiaomi",
+        "target_path": "vendor/xiaomi",
+        "revision": "quartz"
     },
     {
-        "remote":       "aospa",
-        "repository":   "AOSPA/android_kernel_xiaomi_rosy",
-        "target_path":  "kernel/xiaomi/rosy",
+        "remote": "aospa",
+        "repository": "AOSPA/android_kernel_xiaomi_msm8937",
+        "target_path": "kernel/xiaomi/msm8937",
         "revision":     "quartz"
-    },
     {
         "remote":       "aospa",
         "repository":   "AOSPA/android_device_qcom_common",
@@ -28,12 +27,6 @@
         "repository":   "AOSPA/android_packages_apps_Bluetooth",
         "target_path":  "packages/apps/Bluetooth",
         "revision":     "quartz-dev"
-    },
-    {
-        "remote":       "aospa",
-        "repository":   "AOSPA/android_hardware_qcom_gps",
-        "target_path":  "hardware/qcom/gps",
-        "revision":     "quartz-89xx"
     },
     {
         "remote":       "blobs",
